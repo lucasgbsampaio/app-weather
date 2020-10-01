@@ -7,5 +7,6 @@
     "package-lock.json": true,
     "public": true,
     "yarn.lock": true
-  }
+  },
+  "breadcrumbs.showEnums": false
 }

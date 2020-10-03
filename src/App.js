@@ -8,21 +8,24 @@ import TwoDays from './Components/TwoDays';
 import Week from './Components/Week';
 import Alerts from './Components/Alerts';
 import PreviousDays from './Components/PreviousDays';
+import WeatherStorage from './WeatherContext';
 
 export default function App() {
   return (
     <div>
       <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Current />} />
-          <Route path="1hora/" element={<OneHour />} />
-          <Route path="2dias/" element={<TwoDays />} />
-          <Route path="7dias/" element={<Week />} />
-          <Route path="alertas/" element={<Alerts />} />
-          <Route path="diasanteriores/" element={<PreviousDays />} />
-        </Routes>
-        <Footer />
+        <WeatherStorage>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Current />} />
+            <Route path="1hora/" element={<OneHour />} />
+            <Route path="2dias/" element={<TwoDays />} />
+            <Route path="7dias/" element={<Week />} />
+            <Route path="alertas/" element={<Alerts />} />
+            <Route path="diasanteriores/" element={<PreviousDays />} />
+          </Routes>
+          <Footer />
+        </WeatherStorage>
       </BrowserRouter>
     </div>
   );

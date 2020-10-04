@@ -3,10 +3,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Current from './Components/Current';
-import OneHour from './Components/OneHour';
-import TwoDays from './Components/TwoDays';
+import Hours from './Components/Hours';
 import Week from './Components/Week';
-import Alerts from './Components/Alerts';
+import Maps from './Components/Maps';
 import PreviousDays from './Components/PreviousDays';
 import WeatherStorage from './WeatherContext';
 
@@ -18,11 +17,10 @@ export default function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Current />} />
-            <Route path="1hora/" element={<OneHour />} />
-            <Route path="2dias/" element={<TwoDays />} />
+            <Route path="hora/" element={<Hours />} />
             <Route path="7dias/" element={<Week />} />
-            <Route path="alertas/" element={<Alerts />} />
             <Route path="diasanteriores/" element={<PreviousDays />} />
+            <Route path="mapas/" element={<Maps />} />
           </Routes>
           <Footer />
         </WeatherStorage>

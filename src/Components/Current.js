@@ -2,7 +2,22 @@ import React from 'react';
 import { WeatherContext } from '../WeatherContext';
 
 export default function Current() {
-  const { dataCurrent } = React.useContext(WeatherContext);
+  const {
+    dataCurrent,
+    dataOneCall,
+    getCurrent,
+    coord,
+    getOneCall,
+  } = React.useContext(WeatherContext);
+
+  function handleClick(event) {
+    if (event.type === 'click') {
+      getCurrent('Brasília');
+      getOneCall(coord.lat, coord.lon);
+    }
+  }
   console.log(dataCurrent);
-  return <div>Current</div>;
+  console.log(dataOneCall);
+
+  return <div onClick={handleClick}>Clique</div>;
 }

@@ -7,7 +7,7 @@ export const WeatherContext = React.createContext();
 export default function WeatherStorage({ children }) {
   const [dataCurrent, setDataCurrent] = React.useState(null);
   const [dataOneCall, setDataOneCall] = React.useState(null);
-  const [coord, setCoord] = React.useState(null);
+  const [coord, setCoord] = React.useState([]);
   const { request } = useFetch();
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState(null);

@@ -1,28 +1,32 @@
 import React from 'react';
 import style from './styles/Header.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { WeatherContext } from '../WeatherContext';
 
-export default function Header() {
-  const [city, setCity] = React.useState('');
+export default function Header({ props }) {
+  const [city, setCity] = React.useState('brasília');
+  const { getCurrent } = React.useContext(WeatherContext);
+  const navigate = useNavigate();
 
   function handleSubmit(event) {
     event.preventDefault();
+    getCurrent(city);
+    navigate(`${city}/`);
   }
-  function handleChange(event) {
-    setCity(event.target.value);
+
+  function handleChange({ target }) {
+    setCity(target.value);
   }
 
   return (
     <header className={style.header}>
       <nav className={style.mainNav}>
-        <Link className={style.logo} to="/" aria-label="Weather App">
-          <span>The Weather App</span>
-        </Link>
+        <span>The Weather App</span>
         <form onSubmit={handleSubmit}>
           <input
+            id="inputValue"
             type="text"
-            name="buscar"
-            value={city}
+            name="cidade"
             onChange={handleChange}
             placeholder="Buscar cidade"
             aria-label="Buscar cidade"
@@ -30,11 +34,11 @@ export default function Header() {
         </form>
       </nav>
       <nav className={style.secondaryNav}>
-        <Link to="/">Agora</Link>
-        <Link to="hora/">A cada hora</Link>
-        <Link to="7dias/">7 dias</Link>
-        <Link to="diasanteriores/">Dias anteriores</Link>
-        <Link to="mapas/">Mapas</Link>
+        <Link to={`/${city}`}>Agora</Link>
+        <Link to={`hora/${city}`}>A cada hora</Link>
+        <Link to={`7dias/${city}`}>7 dias</Link>
+        <Link to={`diasanteriores/${city}`}>Dias anteriores</Link>
+        <Link to={`mapas/${city}`}>Mapas</Link>
       </nav>
     </header>
   );

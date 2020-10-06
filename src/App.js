@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Current from './Components/Current';
@@ -16,11 +16,12 @@ export default function App() {
         <WeatherStorage>
           <Header />
           <Routes>
-            <Route path="/" element={<Current />} />
-            <Route path="hora/" element={<Hours />} />
-            <Route path="7dias/" element={<Week />} />
-            <Route path="diasanteriores/" element={<PreviousDays />} />
-            <Route path="mapas/" element={<Maps />} />
+            <Navigate from="/" to="/brasília" />
+            <Route path="/:city" element={<Current />} />
+            <Route path="hora/:city/" element={<Hours />} />
+            <Route path="7dias/:city/" element={<Week />} />
+            <Route path="diasanteriores/:city/" element={<PreviousDays />} />
+            <Route path="mapas/:city/" element={<Maps />} />
           </Routes>
           <Footer />
         </WeatherStorage>

@@ -3,7 +3,7 @@ import style from './styles/Header.module.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { WeatherContext } from '../WeatherContext';
 
-export default function Header({ props }) {
+export default function Header() {
   const [city, setCity] = React.useState('brasília');
   const { getCurrent } = React.useContext(WeatherContext);
   const navigate = useNavigate();

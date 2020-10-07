@@ -12,34 +12,40 @@ export default function WeatherStorage({ children }) {
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState(null);
 
-  async function getCurrent(dataNow) {
-    try {
-      setError(null);
-      setLoading(true);
-      const { url, options } = WEATHER_GET(dataNow);
-      const { json } = await request(url, options);
-      setDataCurrent(json);
-      setCoord(json.coord);
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
-  }
+  const getCurrent = React.useCallback(
+    async (dataNow) => {
+      try {
+        setError(null);
+        setLoading(true);
+        const { url, options } = WEATHER_GET(dataNow);
+        const { json } = await request(url, options);
+        setDataCurrent(json);
+        setCoord(json.coord);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    },
+    [request]
+  );
 
-  async function getOneCall(lat, lon) {
-    try {
-      setError(null);
-      setLoading(true);
-      const { url, options } = ONECALL_GET(lat, lon);
-      const { json } = await request(url, options);
-      setDataOneCall(json);
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
-  }
+  const getOneCall = React.useCallback(
+    async (lat, lon) => {
+      try {
+        setError(null);
+        setLoading(true);
+        const { url, options } = ONECALL_GET(lat, lon);
+        const { json } = await request(url, options);
+        setDataOneCall(json);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    },
+    [request]
+  );
 
   return (
     <WeatherContext.Provider

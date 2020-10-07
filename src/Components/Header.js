@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { WeatherContext } from '../WeatherContext';
 
 export default function Header() {
-  const [city, setCity] = React.useState('brasília');
+  const [city, setCity] = React.useState('');
   const { getCurrent } = React.useContext(WeatherContext);
   const navigate = useNavigate();
 
@@ -14,9 +14,11 @@ export default function Header() {
     navigate(`${city}/`);
   }
 
-  function handleChange({ target }) {
-    setCity(target.value);
-  }
+  React.useEffect(() => {
+    if (city === '') {
+      getCurrent('brasília');
+    }
+  }, [city, getCurrent]);
 
   return (
     <header className={style.header}>
@@ -27,18 +29,24 @@ export default function Header() {
             id="inputValue"
             type="text"
             name="cidade"
-            onChange={handleChange}
+            onChange={({ target }) => {
+              setCity(target.value);
+            }}
             placeholder="Buscar cidade"
             aria-label="Buscar cidade"
           />
         </form>
       </nav>
       <nav className={style.secondaryNav}>
-        <Link to={`/${city}`}>Agora</Link>
-        <Link to={`hora/${city}`}>A cada hora</Link>
-        <Link to={`7dias/${city}`}>7 dias</Link>
-        <Link to={`diasanteriores/${city}`}>Dias anteriores</Link>
-        <Link to={`mapas/${city}`}>Mapas</Link>
+        <Link to={city ? `/${city}` : `/brasília`}>Agora</Link>
+        <Link to={city ? `hora/${city}` : `hora/brasília`}>A cada hora</Link>
+        <Link to={city ? `7dias/${city}` : `7dias/brasília`}>7 dias</Link>
+        <Link to={city ? `diasanteriores/${city}` : `diasanteriores/brasília`}>
+          Dias anteriores
+        </Link>
+        <Link to={city ? `mapas/${city}` : `diasanteriores/brasília`}>
+          Mapas
+        </Link>
       </nav>
     </header>
   );

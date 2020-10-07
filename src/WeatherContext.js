@@ -5,7 +5,7 @@ import useFetch from './Hooks/useFetch';
 export const WeatherContext = React.createContext();
 
 export default function WeatherStorage({ children }) {
-  const [dataCurrent, setDataCurrent] = React.useState(null);
+  const [dataCurrent, setDataCurrent] = React.useState([]);
   const [dataOneCall, setDataOneCall] = React.useState(null);
   const [coord, setCoord] = React.useState([]);
   const { request } = useFetch();

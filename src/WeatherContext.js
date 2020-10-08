@@ -5,9 +5,9 @@ import useFetch from './Hooks/useFetch';
 export const WeatherContext = React.createContext();
 
 export default function WeatherStorage({ children }) {
-  const [dataCurrent, setDataCurrent] = React.useState([]);
+  const [dataCurrent, setDataCurrent] = React.useState(null);
   const [dataOneCall, setDataOneCall] = React.useState(null);
-  const [coord, setCoord] = React.useState([]);
+  const [coord, setCoord] = React.useState(null);
   const { request } = useFetch();
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState(null);
@@ -18,9 +18,9 @@ export default function WeatherStorage({ children }) {
         setError(null);
         setLoading(true);
         const { url, options } = WEATHER_GET(dataNow);
-        const { json } = await request(url, options);
+        const json = await request(url, options);
         setDataCurrent(json);
-        setCoord(json.coord);
+        setCoord(json);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -36,7 +36,7 @@ export default function WeatherStorage({ children }) {
         setError(null);
         setLoading(true);
         const { url, options } = ONECALL_GET(lat, lon);
-        const { json } = await request(url, options);
+        const json = await request(url, options);
         setDataOneCall(json);
       } catch (err) {
         setError(err.message);

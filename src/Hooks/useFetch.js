@@ -20,7 +20,7 @@ export default function useFetch() {
     } finally {
       setData(json);
       setLoading(false);
-      return { response, json };
+      return [json];
     }
   }, []);
 

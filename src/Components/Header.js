@@ -23,7 +23,7 @@ export default function Header() {
   return (
     <header className={style.header}>
       <nav className={style.mainNav}>
-        <span>The Weather App</span>
+        <span className={style.logo}>The Weather App</span>
         <form onSubmit={handleSubmit}>
           <input
             id="inputValue"

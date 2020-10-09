@@ -15,21 +15,22 @@ body {
 .mainNav {
   display: flex;
   height: 100px;
-  background-color: #1489db;
+  background-color: #224a6d;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 400px;
+  padding: 0px 500px;
 }
 .secondaryNav {
   display: flex;
   height: 50px;
-  background-color: rgb(2, 67, 89);
+  background-color: #132a3e;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 380px;
+  padding: 0px 480px;
 }
-.logo span {
+.logo {
   font-size: 2rem;
+  color: #f4ffff;
 }
 input[type='text'] {
   width: 380px;

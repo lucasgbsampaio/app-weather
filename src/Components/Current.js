@@ -7,7 +7,14 @@ export default function Current() {
 
   return (
     <main className={style.mainCurrent}>
-      <section className={style.resume}></section>
+      <section className={style.sectionMain}>
+        <div className={style.resume}>
+          <h1>Clima em ...</h1>
+          <span>Às ...</span>
+          <div></div>
+          <div></div>
+        </div>
+      </section>
       <section className={style.details}></section>
     </main>
   );

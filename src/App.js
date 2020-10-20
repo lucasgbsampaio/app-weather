@@ -8,6 +8,7 @@ import Week from './Components/Week';
 import Maps from './Components/Maps';
 import PreviousDays from './Components/PreviousDays';
 import WeatherStorage from './WeatherContext';
+import './App.css';
 
 export default function App() {
   return (

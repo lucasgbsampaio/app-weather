@@ -1,17 +1,28 @@
 .mainCurrent {
-  background-color: #d3f3ff;
-  margin-top: 9rem;
-  width: 100%;
+  background: #003973; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #e5e5be,
+    #003973
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #e5e5be,
+    #003973
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  margin-top: 6rem;
   height: 50rem;
-}
-.sectionMain {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.resume {
-  background-color: #fff;
+.sectionMain {
+  background-color: #edf2f4;
+  border-radius: 5px;
   margin-top: 50px;
-  height: 100%;
-  width: 45%;
+  width: 800px;
+  height: 300px;
+}
+.resume {
 }

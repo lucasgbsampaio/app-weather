@@ -18,7 +18,7 @@ export default function WeatherStorage({ children }) {
         setError(null);
         setLoading(true);
         const { url, options } = WEATHER_GET(dataNow);
-        const json = await request(url, options);
+        const { json } = await request(url, options);
         setDataCurrent(json);
         setCoord(json);
       } catch (err) {

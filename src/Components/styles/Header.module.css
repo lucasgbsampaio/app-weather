@@ -16,7 +16,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 90%;
   max-width: 900px;
 }
 
@@ -33,7 +33,7 @@ header {
   justify-content: space-between;
   align-items: center;
   max-width: 800px;
-  width: 100%;
+  width: 90%;
 }
 
 .logo,
@@ -45,6 +45,11 @@ header {
   font-size: 2rem;
 }
 
+input[type='text']::placeholder {
+  color: #f4ffffb7;
+  opacity: 0.8;
+}
+
 input[type='text'] {
   width: 340px;
   padding: 9px;
@@ -53,7 +58,7 @@ input[type='text'] {
   border: 0;
   text-align: center;
 
-  background: #edf2f4;
+  background: #0f5397;
   background-image: url('../../Assets//search-icon.png');
   background-repeat: no-repeat;
   background-size: 60px;

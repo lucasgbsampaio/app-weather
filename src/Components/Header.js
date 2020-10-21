@@ -10,13 +10,13 @@ export default function Header() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    // getCurrent(city);
+    getCurrent(city);
     navigate(`${city}/`);
   }
 
   React.useEffect(() => {
     if (city === '') {
-      // getCurrent('brasília');
+      getCurrent('brasília');
     }
   }, [city, getCurrent]);
 

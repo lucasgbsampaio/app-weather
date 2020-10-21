@@ -1,28 +1,118 @@
 .mainCurrent {
-  background: #003973; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #e5e5be,
-    #003973
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #e5e5be,
-    #003973
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: linear-gradient(to top, #e5e5be, #003973);
   margin-top: 6rem;
-  height: 50rem;
+  height: 100vh;
+
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
 .sectionMain {
-  background-color: #edf2f4;
-  border-radius: 5px;
-  margin-top: 50px;
-  width: 800px;
-  height: 300px;
+  background: linear-gradient(to top, #0f5397, #002244);
+  margin-top: 30px;
+  max-width: 800px;
+  width: 90%;
+  border-radius: 10px;
 }
-.resume {
+
+.container {
+  margin: 5px 20px;
+}
+
+.container .description {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.mainContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainContent .temp {
+  font-size: 6rem;
+  font-weight: 500;
+}
+
+.sectionDetails {
+  background: #ffffff;
+  color: #272527;
+  margin-top: 30px;
+  max-width: 800px;
+  width: 90%;
+  border-radius: 10px;
+}
+
+.detailsContainer {
+  margin: 5px 20px;
+}
+
+.detailsContainer .info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detailsContainer .main {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.main .firstColumm {
+  width: calc(50% - 12px);
+}
+
+.main .firstColumm span {
+  font-weight: bold;
+}
+
+.main .firstColumm div {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  align-items: center;
+  padding: 10px 0;
+}
+
+.main .firstColumm div p {
+  padding-left: 5px;
+  flex: 1;
+}
+
+.main .secondColumm {
+  width: calc(50% - 12px);
+}
+
+.main .secondColumm div {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  align-items: center;
+  padding: 10px 0;
+}
+
+.main .secondColumm div p {
+  padding-left: 5px;
+  flex: 1;
+}
+
+.main .secondColumm span {
+  font-weight: bold;
+}
+
+.detailsContainer h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.detailsContainer .info {
+  margin: 0 20px;
+}
+
+.info .sunRiseSet {
+  display: flex;
+  align-items: center;
 }

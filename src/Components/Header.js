@@ -1,7 +1,8 @@
 import React from 'react';
 import style from './styles/Header.module.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { WeatherContext } from '../WeatherContext';
+import logo from '../Assets/logo.png';
 
 export default function Header() {
   const [city, setCity] = React.useState('');
@@ -11,7 +12,7 @@ export default function Header() {
   function handleSubmit(event) {
     event.preventDefault();
     getCurrent(city);
-    navigate(`${city}/`);
+    navigate(`/${city}`);
   }
 
   React.useEffect(() => {
@@ -24,7 +25,20 @@ export default function Header() {
     <header>
       <div className={style.infobg}>
         <div className={style.info}>
-          <span className={style.logo}>The Weather App</span>
+          <div className={style.logan}>
+            <img
+              src={logo}
+              style={{
+                width: '45px',
+                height: '40px',
+                background: '#f4ffff',
+              }}
+              alt="Weather."
+            />
+
+            <span className={style.logo}>Weather.</span>
+          </div>
+
           <form onSubmit={handleSubmit}>
             <input
               id="inputValue"
@@ -42,17 +56,40 @@ export default function Header() {
 
       <div className={style.menubg}>
         <nav className={style.menu}>
-          <Link to={city ? `/${city}` : `/brasília`}>AGORA</Link>
-          <Link to={city ? `hora/${city}` : `hora/brasília`}>A CADA HORA</Link>
-          <Link to={city ? `7dias/${city}` : `7dias/brasília`}>7 DIAS</Link>
-          <Link
-            to={city ? `diasanteriores/${city}` : `diasanteriores/brasília`}
+          <NavLink
+            className={style.navBarLink}
+            exact
+            to={city ? `/${city}` : `/brasília`}
+            activeStyle={{
+              color: 'pink',
+            }}
+          >
+            AGORA
+          </NavLink>
+          <NavLink
+            className={style.navBarLink}
+            to={city ? `/hora/${city}` : `/hora/brasília`}
+          >
+            A CADA HORA
+          </NavLink>
+          <NavLink
+            className={style.navBarLink}
+            to={city ? `/7dias/${city}` : `/7dias/brasília`}
+          >
+            7 DIAS
+          </NavLink>
+          <NavLink
+            className={style.navBarLink}
+            to={city ? `/diasanteriores/${city}` : `/diasanteriores/brasília`}
           >
             DIAS ANTERIORES
-          </Link>
-          <Link to={city ? `mapas/${city}` : `diasanteriores/brasília`}>
+          </NavLink>
+          <NavLink
+            className={style.navBarLink}
+            to={city ? `/mapas/${city}` : `/mapas/brasília`}
+          >
             MAPAS
-          </Link>
+          </NavLink>
         </nav>
       </div>
     </header>

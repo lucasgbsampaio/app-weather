@@ -18,11 +18,11 @@ export default function App() {
           <Header />
           <Routes>
             <Navigate from="/" to="/brasília" />
-            <Route path="/:city" element={<Current />} />
-            <Route path="hora/:city/" element={<Hours />} />
-            <Route path="7dias/:city/" element={<Week />} />
-            <Route path="diasanteriores/:city/" element={<PreviousDays />} />
-            <Route path="mapas/:city/" element={<Maps />} />
+            <Route exact path="/:city" element={<Current />} />
+            <Route path="/hora/:city" element={<Hours />} />
+            <Route path="/7dias/:city" element={<Week />} />
+            <Route path="/diasanteriores/:city" element={<PreviousDays />} />
+            <Route path="/mapas/:city" element={<Maps />} />
           </Routes>
           <Footer />
         </WeatherStorage>

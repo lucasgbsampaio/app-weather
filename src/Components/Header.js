@@ -57,36 +57,37 @@ export default function Header() {
       <div className={style.menubg}>
         <nav className={style.menu}>
           <NavLink
-            className={style.navBarLink}
-            exact
             to={city ? `/${city}` : `/brasília`}
-            activeStyle={{
-              color: 'pink',
-            }}
+            className={style.navBarLink}
+            activeClassName={style.navBarLinkActive}
           >
             AGORA
           </NavLink>
           <NavLink
-            className={style.navBarLink}
             to={city ? `/hora/${city}` : `/hora/brasília`}
+            className={style.navBarLink}
+            activeClassName={style.navBarLinkActive}
           >
             A CADA HORA
           </NavLink>
           <NavLink
-            className={style.navBarLink}
             to={city ? `/7dias/${city}` : `/7dias/brasília`}
+            className={style.navBarLink}
+            activeClassName={style.navBarLinkActive}
           >
             7 DIAS
           </NavLink>
           <NavLink
-            className={style.navBarLink}
             to={city ? `/diasanteriores/${city}` : `/diasanteriores/brasília`}
+            className={style.navBarLink}
+            activeClassName={style.navBarLinkActive}
           >
             DIAS ANTERIORES
           </NavLink>
           <NavLink
-            className={style.navBarLink}
             to={city ? `/mapas/${city}` : `/mapas/brasília`}
+            className={style.navBarLink}
+            activeClassName={style.navBarLinkActive}
           >
             MAPAS
           </NavLink>

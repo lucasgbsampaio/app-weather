@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { WeatherContext } from '../WeatherContext';
 import style from './styles/Current.module.css';
 import dateFormat from '../helpers/dateFormat';
@@ -14,7 +14,13 @@ import sunset from '../Assets/icons/wi-sunset.svg';
 import thermometer from '../Assets/icons/wi-thermometer.svg';
 
 export default function Current() {
-  const { dataCurrent } = React.useContext(WeatherContext);
+  const { dataCurrent, getOneCall, coord } = React.useContext(WeatherContext);
+
+  useEffect(() => {
+    if (coord) {
+      getOneCall(coord.lat, coord.lon);
+    }
+  }, [coord, getOneCall]);
 
   if (dataCurrent) {
     return (
@@ -23,7 +29,7 @@ export default function Current() {
           <div className={style.container}>
             <h2>Clima em {dataCurrent.name}</h2>
             <span className={style.datetime}>
-              às {dateFormat(dataCurrent.dt)}
+              às {dateFormat(dataCurrent.dt).formattedTime}
             </span>
 
             <div className={style.mainContent}>
@@ -49,10 +55,10 @@ export default function Current() {
               <span style={{ fontWeight: '500' }}>Sensação térmica</span>
               <div className={style.sunRiseSet}>
                 <img src={sunrise} alt="sunrise" />
-                <span>{dateFormat(dataCurrent.sys.sunrise)}</span>
+                <span>{dateFormat(dataCurrent.sys.sunrise).formattedTime}</span>
                 <div style={{ width: '10px' }}></div>
                 <img src={sunset} alt="sunset" />
-                <span>{dateFormat(dataCurrent.sys.sunset)}</span>
+                <span>{dateFormat(dataCurrent.sys.sunset).formattedTime}</span>
               </div>
             </div>
 

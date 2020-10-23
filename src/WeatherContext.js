@@ -20,7 +20,7 @@ export default function WeatherStorage({ children }) {
         const { url, options } = WEATHER_GET(dataNow);
         const { json } = await request(url, options);
         setDataCurrent(json);
-        setCoord(json);
+        setCoord(json.coord);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -36,7 +36,7 @@ export default function WeatherStorage({ children }) {
         setError(null);
         setLoading(true);
         const { url, options } = ONECALL_GET(lat, lon);
-        const json = await request(url, options);
+        const { json } = await request(url, options);
         setDataOneCall(json);
       } catch (err) {
         setError(err.message);

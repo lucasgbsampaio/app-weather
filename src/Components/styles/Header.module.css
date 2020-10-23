@@ -56,6 +56,10 @@ header {
   border-bottom: 3px solid transparent;
 }
 
+.navBarLinkActive {
+  border-bottom: 3px solid #f4ffff;
+}
+
 .menu .navBarLink:hover {
   transform: translateY(-2px);
 }

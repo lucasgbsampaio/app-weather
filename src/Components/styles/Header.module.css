@@ -51,7 +51,7 @@ header {
   width: 90%;
 }
 
-.menu .navBarLink {
+.navBarLink {
   cursor: pointer;
   border-bottom: 3px solid transparent;
 }
@@ -60,12 +60,12 @@ header {
   border-bottom: 3px solid #f4ffff;
 }
 
-.menu .navBarLink:hover {
+.navBarLink:hover {
   transform: translateY(-2px);
 }
 
 .logo,
-.menu .navBarLink {
+.navBarLink {
   color: #edf2f4;
 }
 

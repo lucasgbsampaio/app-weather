@@ -1,6 +1,6 @@
 import React from 'react';
 import { WeatherContext } from '../WeatherContext';
-import dateFormat from '../helpers/dateFormat';
+// import dateFormat from '../helpers/dateFormat';
 
 import style from './styles/Hours.module.css';
 

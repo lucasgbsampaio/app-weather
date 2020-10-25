@@ -1,8 +1,10 @@
 import React from 'react';
-import style from './styles/Header.module.css';
 import { NavLink, useNavigate } from 'react-router-dom';
+
 import { WeatherContext } from '../WeatherContext';
-import logo from '../Assets/logo.png';
+
+import logo from '../assets/logo.png';
+import style from './styles/Header.module.css';
 
 export default function Header() {
   const [city, setCity] = React.useState('');
@@ -11,15 +13,14 @@ export default function Header() {
 
   function handleSubmit(event) {
     event.preventDefault();
+
     getCurrent(city);
-    navigate(`/${city}`);
+    navigate('/');
   }
 
   React.useEffect(() => {
-    if (city === '') {
-      getCurrent('brasília');
-    }
-  }, [city, getCurrent]);
+    getCurrent('brasília');
+  }, [getCurrent]);
 
   return (
     <header>
@@ -57,35 +58,40 @@ export default function Header() {
       <div className={style.menubg}>
         <nav className={style.menu}>
           <NavLink
-            to={city ? `/${city}` : `/brasília`}
+            to="/"
             className={style.navBarLink}
             activeClassName={style.navBarLinkActive}
+            end
           >
             AGORA
           </NavLink>
+
           <NavLink
-            to={city ? `/hora/${city}` : `/hora/brasília`}
+            to="/hora"
             className={style.navBarLink}
             activeClassName={style.navBarLinkActive}
           >
             A CADA HORA
           </NavLink>
+
           <NavLink
-            to={city ? `/7dias/${city}` : `/7dias/brasília`}
+            to="/7dias"
             className={style.navBarLink}
             activeClassName={style.navBarLinkActive}
           >
             7 DIAS
           </NavLink>
+
           <NavLink
-            to={city ? `/diasanteriores/${city}` : `/diasanteriores/brasília`}
+            to="/diasanteriores"
             className={style.navBarLink}
             activeClassName={style.navBarLinkActive}
           >
             DIAS ANTERIORES
           </NavLink>
+
           <NavLink
-            to={city ? `/mapas/${city}` : `/mapas/brasília`}
+            to="/mapas"
             className={style.navBarLink}
             activeClassName={style.navBarLinkActive}
           >

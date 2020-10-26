@@ -1,5 +1,11 @@
 import React from 'react';
+import MainContent from '../Components/MainContent';
+import { WeatherContext } from '../WeatherContext';
 
 export default function PreviousDays() {
-  return <div>PreviousDays</div>;
+  return (
+    <>
+      <MainContent dataHistorical={true} />
+    </>
+  );
 }

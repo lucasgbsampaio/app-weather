@@ -1,0 +1,19 @@
+.mainContent {
+  background: linear-gradient(to top, #e5e5be, #003973);
+  margin-top: 6rem;
+  margin-bottom: 50px;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainSection {
+  background: #f4ffff;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 800px;
+  height: 900px;
+  border-radius: 10px;
+}

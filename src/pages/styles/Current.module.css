@@ -1,6 +1,7 @@
 .mainCurrent {
   background: linear-gradient(to top, #e5e5be, #003973);
   margin-top: 6rem;
+  margin-bottom: 50px;
   height: calc(100vh - 150px);
 
   display: flex;
@@ -124,7 +125,7 @@
   }
 
   .mainCurrent {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 135px);
   }
 
   .mainContent .temp {
@@ -142,8 +143,11 @@
   .main .secondColumm {
     width: 100%;
   }
+  .sectionDetails {
+    margin-bottom: 30px;
+  }
   .mainCurrent {
-    height: 100vh;
+    height: 100%;
   }
 }
 
@@ -153,23 +157,5 @@
   }
   .container .mainContent {
     flex-direction: column;
-  }
-}
-
-@media (max-height: 916px) {
-  .mainCurrent {
-    height: calc(100vh + 200px);
-  }
-}
-
-@media (max-height: 720px) {
-  .mainCurrent {
-    height: calc(100vh + 250px);
-  }
-}
-
-@media (max-height: 670px) {
-  .mainCurrent {
-    height: calc(100vh + 300px);
   }
 }

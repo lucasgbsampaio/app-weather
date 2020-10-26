@@ -39,7 +39,8 @@
 .sectionDetails {
   background: #ffffff;
   color: #272527;
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 30px;
   max-width: 800px;
   width: 90%;
   border-radius: 10px;
@@ -115,4 +116,60 @@
 .info .sunRiseSet {
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 570px) {
+  html {
+    font-size: 85%;
+  }
+
+  .mainCurrent {
+    height: calc(100vh - 100px);
+  }
+
+  .mainContent .temp {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .detailsContainer .main {
+    display: block;
+  }
+  .main .firstColumm {
+    width: 100%;
+  }
+  .main .secondColumm {
+    width: 100%;
+  }
+  .mainCurrent {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    text-align: center;
+  }
+  .container .mainContent {
+    flex-direction: column;
+  }
+}
+
+@media (max-height: 916px) {
+  .mainCurrent {
+    height: calc(100vh + 200px);
+  }
+}
+
+@media (max-height: 720px) {
+  .mainCurrent {
+    height: calc(100vh + 250px);
+  }
+}
+
+@media (max-height: 670px) {
+  .mainCurrent {
+    height: calc(100vh + 300px);
+  }
 }

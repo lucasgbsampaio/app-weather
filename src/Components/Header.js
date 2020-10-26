@@ -8,6 +8,7 @@ import style from './styles/Header.module.css';
 
 export default function Header() {
   const [city, setCity] = React.useState('');
+  const [show, setShow] = React.useState(false);
   const { getCurrent } = React.useContext(WeatherContext);
   const navigate = useNavigate();
 
@@ -55,7 +56,13 @@ export default function Header() {
         </div>
       </div>
 
-      <div className={style.menubg}>
+      <div className={show ? style.menubg + ' ' + style.menuOn : style.menubg}>
+        <div onClick={() => setShow(!show)} className={style.menuToggle}>
+          <div className={style.one}></div>
+          <div className={style.two}></div>
+          <div className={style.three}></div>
+        </div>
+
         <nav className={style.menu}>
           <NavLink
             to="/"

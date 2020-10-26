@@ -53,11 +53,14 @@ header {
 
 .navBarLink {
   cursor: pointer;
-  border-bottom: 3px solid transparent;
+  border-bottom: 2px solid transparent;
+  padding-top: 2px;
 }
 
 .navBarLinkActive {
-  border-bottom: 3px solid #f4ffff;
+  border-bottom: 2px solid #f4ffff;
+  transition: border-bottom 0.5s ease-in-out;
+  padding-top: 2px;
 }
 
 .navBarLink:hover {
@@ -70,7 +73,7 @@ header {
 }
 
 input[type='text'] {
-  width: 340px;
+  width: 300px;
   padding: 9px;
   margin-right: 10px;
   border-radius: 5px;
@@ -78,7 +81,7 @@ input[type='text'] {
   text-align: center;
 
   background: #0f5397;
-  background-image: url('../../Assets//search-icon.png');
+  background-image: url('../../assets//search-icon.png');
   background-repeat: no-repeat;
   background-size: 60px;
   background-position-y: -12px;
@@ -88,4 +91,89 @@ input[type='text'] {
 input[type='text']::placeholder {
   color: #f4ffffb7;
   opacity: 0.8;
+}
+
+@media (max-width: 570px) {
+  .menu {
+    display: none;
+  }
+
+  .info .logan {
+    display: none;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  input[type='text'] {
+    width: 100%;
+  }
+
+  .one,
+  .two,
+  .three {
+    background-color: #fff;
+    height: 5px;
+    width: 100%;
+    margin: 4px auto;
+
+    transition-duration: 0.3s;
+  }
+
+  .menuToggle {
+    width: 40px;
+    height: 30px;
+    margin-right: 20px;
+  }
+
+  .menuOn {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #002244;
+    z-index: 1000;
+  }
+
+  .menuOn .menu {
+    display: block;
+  }
+
+  .menuOn .menuToggle {
+    position: absolute;
+    top: 10px;
+    right: 1px;
+  }
+
+  .menuOn .one {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  .menuOn .two {
+    opacity: 0;
+  }
+
+  .menuOn .three {
+    transform: rotate(-45deg) translate(6px, -5px);
+  }
+
+  .menuOn .menu {
+    display: block;
+  }
+
+  .menuOn .menu {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+
+  .menuOn .menu a {
+    font-size: 1.8rem;
+    line-height: 4rem;
+  }
 }

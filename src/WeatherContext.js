@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { WEATHER_GET, ONECALL_GET } from './api/api';
-import useFetch from './hooks/useFetch';
+import { WEATHER_GET, ONECALL_GET } from './Api/api';
+import useFetch from './Hooks/useFetch';
 
 export const WeatherContext = React.createContext();
 

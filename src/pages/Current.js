@@ -5,14 +5,14 @@ import dateFormat from '../helpers/dateFormat';
 import capitalizeFirstLetter from '../helpers/capitalizeFirstLetter';
 import sliceTemp from '../helpers/sliceTemp';
 
-import barometer from '../assets/icons/wi-barometer.svg';
-import cloudy from '../assets/icons/wi-cloudy.svg';
-import direction from '../assets/icons/wi-direction-up.svg';
-import humidity from '../assets/icons/wi-humidity.svg';
-import wind from '../assets/icons/wi-strong-wind.svg';
-import sunrise from '../assets/icons/wi-sunrise.svg';
-import sunset from '../assets/icons/wi-sunset.svg';
-import thermometer from '../assets/icons/wi-thermometer.svg';
+import barometer from '../Assets/icons/wi-barometer.svg';
+import cloudy from '../Assets/icons/wi-cloudy.svg';
+import direction from '../Assets/icons/wi-direction-up.svg';
+import humidity from '../Assets/icons/wi-humidity.svg';
+import wind from '../Assets/icons/wi-strong-wind.svg';
+import sunrise from '../Assets/icons/wi-sunrise.svg';
+import sunset from '../Assets/icons/wi-sunset.svg';
+import thermometer from '../Assets/icons/wi-thermometer.svg';
 
 import style from './styles/Current.module.css';
 

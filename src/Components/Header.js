@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 
 import { WeatherContext } from '../WeatherContext';
 
-import logo from '../assets/logo.png';
+import logo from '../Assets/logo.png';
 import style from './styles/Header.module.css';
 
 export default function Header() {

@@ -21,3 +21,12 @@ export function ONECALL_GET(lat, lon) {
     },
   };
 }
+
+export function HISTORICAL_GET(lat, lon, dt) {
+  return {
+    url: `${API_URL}/onecall/timemachine?lat=${lat}&lon=${lon}&dt=${dt}&appid=${API_KEY}&${UNITS_LANG}`,
+    options: {
+      method: 'GET',
+    },
+  };
+}

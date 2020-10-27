@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { WeatherContext } from '../WeatherContext';
 import dateFormat from '../helpers/dateFormat';
@@ -17,13 +17,7 @@ import thermometer from '../assets/icons/wi-thermometer.svg';
 import style from './styles/Current.module.css';
 
 export default function Current() {
-  const { dataCurrent, getOneCall, coord } = React.useContext(WeatherContext);
-
-  useEffect(() => {
-    if (coord) {
-      getOneCall(coord.lat, coord.lon);
-    }
-  }, [coord, getOneCall]);
+  const { dataCurrent } = React.useContext(WeatherContext);
 
   if (dataCurrent) {
     return (

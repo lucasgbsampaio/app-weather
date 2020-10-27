@@ -1,11 +1,16 @@
 import React from 'react';
-import MainContent from '../Components/MainContent';
+import MainContent from '../Components/MainContent/MainContent';
+
 import { WeatherContext } from '../WeatherContext';
 
 export default function PreviousDays() {
+  const { getHistorical } = React.useContext(WeatherContext);
+
+  React.useEffect(() => {}, [getHistorical]);
+
   return (
     <>
-      <MainContent dataHistorical={true} />
+      <MainContent title="dos dias anteriores" type="hourly" />
     </>
   );
 }

@@ -1,0 +1,96 @@
+.container {
+  margin-bottom: 8px;
+  border-bottom: 1px solid #dedede;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.detailsContainer {
+  overflow: hidden;
+  transition: height 0.3s ease-out;
+  height: 0;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #1f1f1f;
+  background-color: #fff;
+  padding: 16px 14px 16px 14px;
+}
+
+.date {
+  min-width: 52px;
+  font-size: 1rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.date span {
+  display: block;
+}
+
+.sub {
+  color: #8b8b8b;
+  font-weight: 400;
+}
+
+.icon {
+  font-size: 40px;
+  width: 65px;
+}
+
+.temp {
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.08;
+  width: 48px;
+  text-align: center;
+}
+
+.desc {
+  width: 140px;
+}
+
+.description {
+  color: #3f3f3f;
+}
+
+.clouds {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #3f3f3f;
+  display: flex;
+  align-items: center;
+  width: 60px;
+  justify-content: center;
+}
+
+.wind {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #3f3f3f;
+  display: flex;
+  align-items: center;
+  width: 100px;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .headerContent {
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 800px) {
+  .icon {
+    width: 40px;
+    font-size: 30px;
+  }
+  .temp {
+    font-size: 1.2rem;
+  }
+}

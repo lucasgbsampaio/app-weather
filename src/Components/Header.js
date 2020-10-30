@@ -10,7 +10,9 @@ export default function Header() {
   const [city, setCity] = React.useState('');
   const [show, setShow] = React.useState(false);
 
-  const { getCurrent, getOneCall, coord } = React.useContext(WeatherContext);
+  const { getCurrent, getOneCall, getHistorical, coord } = React.useContext(
+    WeatherContext
+  );
 
   const navigate = useNavigate();
 
@@ -25,12 +27,22 @@ export default function Header() {
 
   React.useEffect(() => {
     const storedData = window.localStorage.getItem('city');
-    if (!storedData) getCurrent('brasília') && getOneCall(-15.7801, -47.9292);
 
-    // Causando infinite loop por causa do coord que vem do WeatherContext
-    // getCurrent(storedData) && coord && getOneCall(coord.lat,coord.lon);
-  }, [getCurrent, getOneCall]);
-  // [getCurrent, getOneCall, coord]);
+    if (!storedData) {
+      getCurrent('brasília') &&
+        getOneCall(-15.7801, -47.9292) &&
+        getHistorical(-15.7801, -47.9292);
+    } else {
+      getCurrent(storedData);
+    }
+  }, [getCurrent, getOneCall, getHistorical]);
+
+  React.useEffect(() => {
+    const storedData = window.localStorage.getItem('city');
+
+    if (coord && storedData)
+      getOneCall(coord.lat, coord.lon) && getHistorical(coord.lat, coord.lon);
+  }, [getOneCall, coord, getHistorical]);
 
   return (
     <header>

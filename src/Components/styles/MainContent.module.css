@@ -2,7 +2,7 @@
   background: linear-gradient(to top, #e5e5be, #003973);
   margin-top: 6rem;
   margin-bottom: 50px;
-  height: 100vh;
+  height: 100%;
   color: black;
 
   display: flex;
@@ -14,8 +14,13 @@
   background: #f4ffff;
   margin-top: 30px;
   margin-bottom: 30px;
-  width: 800px;
-  height: 900px;
+  max-width: 800px;
+  width: 90%;
   border-radius: 10px;
   padding: 20px;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 500;
 }

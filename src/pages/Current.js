@@ -15,6 +15,7 @@ import sunset from '../Assets/icons/wi-sunset.svg';
 import thermometer from '../Assets/icons/wi-thermometer.svg';
 
 import style from './styles/Current.module.css';
+import showIcon from '../helpers/showIcon';
 
 export default function Current() {
   const { dataCurrent } = React.useContext(WeatherContext);
@@ -34,10 +35,10 @@ export default function Current() {
               <span className={style.temp}>
                 {sliceTemp(dataCurrent.main.temp)}°C
               </span>
-              <img
-                src={`http://openweathermap.org/img/wn/${dataCurrent.weather[0].icon}@4x.png`}
-                alt={dataCurrent.weather[0].description}
-              />
+
+              <div style={{ fontSize: '110px', marginRight: '10px' }}>
+                <i className={showIcon(dataCurrent.weather[0])}></i>
+              </div>
             </div>
 
             <span className={style.description}>

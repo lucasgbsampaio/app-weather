@@ -1,8 +1,12 @@
+import previousDay from '../helpers/previousDay';
+
 export const API_URL = 'http://api.openweathermap.org/data/2.5';
 
 export const UNITS_LANG = 'units=metric&lang=pt_br';
 
 export const API_KEY = 'bf28a3653954efd294c82eb3769ef252';
+
+export const YESTERDAY = previousDay();
 
 export function WEATHER_GET(city) {
   return {
@@ -22,9 +26,9 @@ export function ONECALL_GET(lat, lon) {
   };
 }
 
-export function HISTORICAL_GET(lat, lon, dt) {
+export function HISTORICAL_GET(lat, lon) {
   return {
-    url: `${API_URL}/onecall/timemachine?lat=${lat}&lon=${lon}&dt=${dt}&appid=${API_KEY}&${UNITS_LANG}`,
+    url: `${API_URL}/onecall/timemachine?lat=${lat}&lon=${lon}&dt=${YESTERDAY}&appid=${API_KEY}&${UNITS_LANG}`,
     options: {
       method: 'GET',
     },

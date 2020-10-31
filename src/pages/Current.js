@@ -68,7 +68,8 @@ export default function Current() {
                   <img src={thermometer} alt="thermometer" />
                   <p>Max. / Mín.</p>
                   <span>
-                    {dataCurrent.main.temp_max}°C / {dataCurrent.main.temp_min}
+                    {sliceTemp(dataCurrent.main.temp_max)}°C /{' '}
+                    {sliceTemp(dataCurrent.main.temp_min)}
                     °C
                   </span>
                 </div>

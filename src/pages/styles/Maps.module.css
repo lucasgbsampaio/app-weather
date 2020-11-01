@@ -1,0 +1,17 @@
+.mapWrapper {
+  background: linear-gradient(to top, #e5e5be, #003973);
+
+  margin-top: 6rem;
+  margin-bottom: 50px;
+  height: calc(100vh - 147px);
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (max-width: 570px) {
+  .mapWrapper {
+    height: calc(100vh - 132px);
+  }
+}

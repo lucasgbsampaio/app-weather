@@ -136,7 +136,7 @@ input[type='text']::placeholder {
     height: 100vh;
 
     background-color: #002244;
-    z-index: 1000;
+    z-index: 9999;
   }
 
   .menuOn .menu {

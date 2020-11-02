@@ -39,6 +39,14 @@ a {
   flex-direction: column;
 }
 
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  color: black;
+}
+
 @media (max-width: 570px) {
   .mapWrapper {
     height: calc(100vh - 132px);

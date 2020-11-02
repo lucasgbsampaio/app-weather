@@ -4,6 +4,7 @@ import { WeatherContext } from '../WeatherContext';
 import dateFormat from '../helpers/dateFormat';
 import capitalizeFirstLetter from '../helpers/capitalizeFirstLetter';
 import sliceTemp from '../helpers/sliceTemp';
+import showIcon from '../helpers/showIcon';
 
 import barometer from '../Assets/icons/wi-barometer.svg';
 import cloudy from '../Assets/icons/wi-cloudy.svg';
@@ -14,11 +15,19 @@ import sunrise from '../Assets/icons/wi-sunrise.svg';
 import sunset from '../Assets/icons/wi-sunset.svg';
 import thermometer from '../Assets/icons/wi-thermometer.svg';
 
+import Loader from 'react-loader-spinner';
 import style from './styles/Current.module.css';
-import showIcon from '../helpers/showIcon';
 
 export default function Current() {
-  const { dataCurrent } = React.useContext(WeatherContext);
+  const { dataCurrent, loading } = React.useContext(WeatherContext);
+
+  if (loading) {
+    return (
+      <div className="spinner">
+        <Loader type="Oval" color="black" height={40} width={40} />
+      </div>
+    );
+  }
 
   if (dataCurrent) {
     return (

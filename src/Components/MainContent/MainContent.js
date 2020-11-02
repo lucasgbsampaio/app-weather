@@ -3,16 +3,28 @@ import React from 'react';
 import { WeatherContext } from '../../WeatherContext';
 import Content from './Content';
 
+import Loader from 'react-loader-spinner';
 import style from '../styles/MainContent.module.css';
 
-export default function MainContent({ title, type, show }) {
-  const { dataOneCall, dataCurrent, dataHistorical } = React.useContext(
-    WeatherContext
-  );
+export default function MainContent({ title, type }) {
+  const {
+    dataOneCall,
+    dataCurrent,
+    dataHistorical,
+    loading,
+  } = React.useContext(WeatherContext);
 
   const shouldDisplayHours = dataOneCall && type === 'hourly';
   const shouldDisplayWeek = dataOneCall && type === 'daily';
   const shouldDisplayPreviousDays = dataHistorical && type === 'previous';
+
+  if (loading) {
+    return (
+      <div className="spinner">
+        <Loader type="Oval" color="black" height={40} width={40} />
+      </div>
+    );
+  }
 
   return (
     <main className={style.mainContent}>

@@ -24,3 +24,9 @@
   font-size: 1.4rem;
   font-weight: 500;
 }
+
+@media (min-height: 1100px) {
+  .mainContent {
+    height: 100vh;
+  }
+}

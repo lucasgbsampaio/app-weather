@@ -11,11 +11,9 @@ export default function WeatherStorage({ children }) {
 
   const [coord, setCoord] = React.useState(null);
   const [loading, setLoading] = React.useState(false);
-  const [error, setError] = React.useState(null);
 
   const getCurrent = React.useCallback(async (dataNow) => {
     try {
-      setError(null);
       setLoading(true);
 
       const { url, options } = WEATHER_GET(dataNow);
@@ -24,8 +22,6 @@ export default function WeatherStorage({ children }) {
 
       setDataCurrent(json);
       setCoord(json.coord);
-    } catch (err) {
-      setError(err.message);
     } finally {
       setLoading(false);
     }
@@ -33,7 +29,6 @@ export default function WeatherStorage({ children }) {
 
   const getOneCall = React.useCallback(async (lat, lon) => {
     try {
-      setError(null);
       setLoading(true);
 
       const { url, options } = ONECALL_GET(lat, lon);
@@ -41,8 +36,6 @@ export default function WeatherStorage({ children }) {
       const json = await response.json();
 
       setDataOneCall(json);
-    } catch (err) {
-      setError(err.message);
     } finally {
       setLoading(false);
     }
@@ -50,7 +43,6 @@ export default function WeatherStorage({ children }) {
 
   const getHistorical = React.useCallback(async (lat, lon) => {
     try {
-      setError(null);
       setLoading(true);
 
       const { url, options } = HISTORICAL_GET(lat, lon);
@@ -58,8 +50,6 @@ export default function WeatherStorage({ children }) {
       const json = await response.json();
 
       setDataHistorical(json);
-    } catch (err) {
-      setError(err.message);
     } finally {
       setLoading(false);
     }
@@ -76,7 +66,6 @@ export default function WeatherStorage({ children }) {
         getOneCall,
         getHistorical,
         loading,
-        error,
       }}
     >
       {children}

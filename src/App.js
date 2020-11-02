@@ -12,6 +12,7 @@ import PreviousDays from './pages/PreviousDays';
 
 import WeatherStorage from './WeatherContext';
 
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import './App.css';
 
 export default function App() {

@@ -3,7 +3,10 @@ import { NavLink, useNavigate } from 'react-router-dom';
 
 import { WeatherContext } from '../WeatherContext';
 
+import cities from '../cities.json';
+
 import style from './styles/Header.module.css';
+import capitalizeFirstLetter from '../helpers/capitalizeFirstLetter';
 
 export default function Header() {
   const [city, setCity] = React.useState('');
@@ -17,10 +20,17 @@ export default function Header() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    getCurrent(city);
-    window.localStorage.setItem('city', `${city}`);
+    const hasCity = cities.some(
+      (data) => data['name'] === capitalizeFirstLetter(city)
+    );
 
-    navigate('/');
+    if (hasCity) {
+      getCurrent(city);
+      window.localStorage.setItem('city', `${city}`);
+      navigate('/');
+    } else {
+      return null;
+    }
   }
 
   React.useEffect(() => {

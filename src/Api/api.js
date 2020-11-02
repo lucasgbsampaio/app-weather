@@ -1,6 +1,6 @@
 import previousDay from '../helpers/previousDay';
 
-export const API_URL = 'http://api.openweathermap.org/data/2.5';
+export const API_URL = 'https://api.openweathermap.org/data/2.5';
 
 export const UNITS_LANG = 'units=metric&lang=pt_br';
 

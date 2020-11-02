@@ -56,7 +56,11 @@ export default function Header() {
     <header>
       <div className={style.infobg}>
         <div className={style.info}>
-          <form onSubmit={handleSubmit} style={{ width: '100%' }}>
+          <form
+            onSubmit={handleSubmit}
+            style={{ width: '100%' }}
+            autocomplete="off"
+          >
             <input
               id="inputValue"
               type="text"

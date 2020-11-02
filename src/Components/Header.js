@@ -3,12 +3,10 @@ import { NavLink, useNavigate } from 'react-router-dom';
 
 import { WeatherContext } from '../WeatherContext';
 
-import logo from '../Assets/logo.png';
 import style from './styles/Header.module.css';
 
 export default function Header() {
   const [city, setCity] = React.useState('');
-  const [show, setShow] = React.useState(false);
 
   const { getCurrent, getOneCall, getHistorical, coord } = React.useContext(
     WeatherContext
@@ -48,21 +46,7 @@ export default function Header() {
     <header>
       <div className={style.infobg}>
         <div className={style.info}>
-          <div className={style.logan}>
-            <img
-              src={logo}
-              style={{
-                width: '45px',
-                height: '40px',
-                background: '#f4ffff',
-              }}
-              alt="Weather."
-            />
-
-            <span className={style.logo}>Weather.</span>
-          </div>
-
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} style={{ width: '100%' }}>
             <input
               id="inputValue"
               type="text"
@@ -77,13 +61,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className={show ? style.menubg + ' ' + style.menuOn : style.menubg}>
-        <div onClick={() => setShow(!show)} className={style.menuToggle}>
-          <div className={style.one}></div>
-          <div className={style.two}></div>
-          <div className={style.three}></div>
-        </div>
-
+      <div className={style.menubg}>
         <nav className={style.menu}>
           <NavLink
             to="/"

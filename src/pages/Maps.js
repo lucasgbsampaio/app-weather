@@ -53,6 +53,14 @@ export default function Maps() {
     }
   }, [coord, leafletMap]);
 
+  React.useEffect(() => {
+    const storedData = window.localStorage.getItem('city');
+
+    if (!storedData && leafletMap) {
+      setLeafletMap(leafletMap.setView([-15.7801, -47.9292], 10));
+    }
+  }, [leafletMap]);
+
   return (
     <div className="mapWrapper">
       <div ref={mapRef} id="map"></div>

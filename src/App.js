@@ -16,7 +16,7 @@ import './App.css';
 
 export default function App() {
   return (
-    <div>
+    <>
       <BrowserRouter>
         <WeatherStorage>
           <Header />
@@ -30,6 +30,6 @@ export default function App() {
           <Footer />
         </WeatherStorage>
       </BrowserRouter>
-    </div>
+    </>
   );
 }

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
-
 header {
   position: fixed;
   width: 100%;
@@ -19,20 +17,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  max-width: 900px;
-}
-
-.info .logan {
-  display: flex;
-}
-
-.info .logan .logo {
-  margin-left: 15px;
-}
-
-.logo {
-  font-family: 'Sedgwick Ave Display', cursive;
-  font-size: 2.2rem;
+  max-width: 800px;
 }
 
 .menubg {
@@ -67,13 +52,8 @@ header {
   transform: translateY(-2px);
 }
 
-.logo,
-.navBarLink {
-  color: #edf2f4;
-}
-
 input[type='text'] {
-  width: 300px;
+  width: 100%;
   padding: 9px;
   margin-right: 10px;
   border-radius: 5px;
@@ -93,87 +73,16 @@ input[type='text']::placeholder {
   opacity: 0.8;
 }
 
-@media (max-width: 570px) {
-  .menu {
-    display: none;
-  }
-
-  .info .logan {
-    display: none;
-  }
-
-  form {
-    width: 100%;
-  }
-
-  input[type='text'] {
-    width: 100%;
-  }
-
-  .one,
-  .two,
-  .three {
-    background-color: #fff;
-    height: 5px;
-    width: 100%;
-    margin: 4px auto;
-
-    transition-duration: 0.3s;
-  }
-
-  .menuToggle {
-    width: 40px;
-    height: 30px;
-    margin-right: 20px;
-  }
-
-  .menuOn {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100vw;
-    height: 100vh;
-
-    background-color: #002244;
-    z-index: 9999;
-  }
-
-  .menuOn .menu {
-    display: block;
-  }
-
-  .menuOn .menuToggle {
-    position: absolute;
-    top: 10px;
-    right: 1px;
-  }
-
-  .menuOn .one {
-    transform: rotate(45deg) translate(7px, 7px);
-  }
-
-  .menuOn .two {
-    opacity: 0;
-  }
-
-  .menuOn .three {
-    transform: rotate(-45deg) translate(6px, -5px);
-  }
-
-  .menuOn .menu {
-    display: block;
-  }
-
-  .menuOn .menu {
-    text-align: center;
+@media (max-width: 460px) {
+  .menubg {
+    overflow-x: auto;
     display: flex;
-    flex-direction: column;
-    margin-bottom: 32px;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
   }
-
-  .menuOn .menu a {
-    font-size: 1.8rem;
-    line-height: 4rem;
+  .menubg a + a {
+    flex: 0 0 auto;
+    margin: 0px 15px 0px 15px;
   }
 }

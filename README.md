@@ -1,5 +1,5 @@
 <h1 align="center">
-     <a href="https://appweather-above.herokuapp.com/" alt="site do weatherabove"> WeatherAbove App </a>
+     <a href="https://appweather-above.herokuapp.com/" alt="site do weatherabove"> WeatherAbove App. </a>
 </h1>
 
 <h3 align="center">
@@ -71,7 +71,7 @@ As seguintes funcionalidades estão disponíveis:
 
 ---
 
-## 🎨 Demonstração da aplicação
+## 🔍 Demonstração da aplicação
 
 A aplicação está hospedada no [Heroku](https://appweather-above.herokuapp.com)
 
@@ -126,7 +126,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ---
 
-## 🦸 Autor
+## 👨‍💻 Autor
 
 - **Lucas Sampaio (lucasfe4nor)** - [Twitter](https://twitter.com/lucasfe4nor) - [LinkedIn](https://www.linkedin.com/in/lucasgbsampaio/)
 

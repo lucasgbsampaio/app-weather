@@ -27,7 +27,7 @@
 </p>
 
 <h4 align="center">
-	🚧 Concluído 🚀 🚧
+	🚧 Concluído 🚧
 </h4>
 
 # Tabela de conteúdos
@@ -39,7 +39,7 @@
 - [Demonstração da aplicação](#-demonstração-da-aplicação)
 - [Como executar o projeto](#-como-executar-o-projeto)
   - [Pré-requisitos](#pré-requisitos)
-  - [Rodando a aplicação web (Frontend)](#user-content--rodando-a-aplicação-web-frontend)
+  - [Rodando a aplicação web](#user-content--rodando-a-aplicação-web-frontend)
 - [Tecnologias](#-tecnologias)
   - [WebSite](#user-content-website--react)
 - [Autor](#-autor)
@@ -56,6 +56,8 @@ Informações sobre condições climáticas como : temperatura, clima, chuva, um
 
 ## ⚙️ Funcionalidades
 
+As seguintes funcionalidades estão disponíveis:
+
 - [x] Os usuários podem consultar a previsão do tempo:
 
   - [x] do atual momento
@@ -71,7 +73,7 @@ Informações sobre condições climáticas como : temperatura, clima, chuva, um
 
 ## 🎨 Demonstração da aplicação
 
-A aplicação está hospedada no Heroku:
+A aplicação está hospedada no [Heroku](https://appweather-above.herokuapp.com)
 
 ### Web
 
@@ -82,10 +84,6 @@ A aplicação está hospedada no Heroku:
 ---
 
 ## 🚀 Como executar o projeto
-
-Este projeto é dividido em apenas uma parte:
-
-1. Frontend
 
 ### Pré-requisitos
 

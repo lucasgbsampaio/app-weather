@@ -1,5 +1,4 @@
-import dotenv from dotenv
-dotenv.config()
+import dotenv from 'dotenv';
 
 import previousDay from '../helpers/previousDay';
 
@@ -7,6 +6,7 @@ export const API_URL = 'https://api.openweathermap.org/data/2.5';
 
 export const UNITS_LANG = 'units=metric&lang=pt_br';
 
+dotenv.config();
 export const API_KEY = process.env.REACT_APP_API_KEY;
 
 export const YESTERDAY = previousDay();

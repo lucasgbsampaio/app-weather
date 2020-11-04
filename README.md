@@ -89,6 +89,8 @@ A aplicação está hospedada no [Heroku](https://appweather-above.herokuapp.com
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) e [Yarn](https://yarnpkg.com/).
+Além disso, irá precisar de uma conta no [OpenWeatherMap](https://home.openweathermap.org/users/sign_up),
+que disponibilizará uma key gratuita para ter acesso à API dos dados meteorológicos.
 
 #### 🧭 Rodando a aplicação web (Frontend)
 
@@ -99,6 +101,9 @@ $ git clone https://github.com/lucasfe4nor/app-weather.git
 
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd app-weather
+
+# Em seguida crie um arquivo .env e
+# adicione sua key seguindo as especificações do arquivo .env.sample
 
 # Instale as dependências
 $ yarn install

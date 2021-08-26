@@ -7,21 +7,21 @@
 </h3>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/lucasfe4nor/app-weather?color=%2304D361">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/lucasgbsampaio/app-weather?color=%2304D361">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/lucasfe4nor/app-weather">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/lucasgbsampaio/app-weather">
 
-  <a href="https://www.twitter.com/lucasfe4nor/">
-    <img alt="Siga no Twitter" src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Flucasfe4nor%2Fapp-weather">
+  <a href="https://www.twitter.com/lucasgbsampaio/">
+    <img alt="Siga no Twitter" src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Flucasgbsampaio%2Fapp-weather">
   </a>
   
-  <a href="https://github.com/lucasfe4nor/app-weather/commits/main">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/lucasfe4nor/app-weather">
+  <a href="https://github.com/lucasgbsampaio/app-weather/commits/main">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/lucasgbsampaio/app-weather">
   </a>
     
    <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
-   <a href="https://github.com/lucasfe4nor/app-weather/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/lucasfe4nor/app-weather?style=social">
+   <a href="https://github.com/lucasgbsampaio/app-weather/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/lucasgbsampaio/app-weather?style=social">
   </a>
 
 </p>
@@ -97,7 +97,7 @@ que disponibilizará uma key gratuita para ter acesso à API dos dados meteorol�
 ```bash
 
 # Clone este repositório
-$ git clone https://github.com/lucasfe4nor/app-weather.git
+$ git clone https://github.com/lucasgbsampaio/app-weather.git
 
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd app-weather
@@ -127,13 +127,13 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - **[Leaflet](https://react-leaflet.js.org/en/)**
 - **[React Loader Spinner](https://github.com/mhnpd/react-loader-spinner)**
 
-> Veja o arquivo [package.json](https://github.com/lucasfe4nor/app-weather/blob/main/package.json)
+> Veja o arquivo [package.json](https://github.com/lucasgbsampaio/app-weather/blob/main/package.json)
 
 ---
 
 ## 👨‍💻 Autor
 
-- **Lucas Sampaio (lucasfe4nor)** - [Twitter](https://twitter.com/lucasfe4nor) - [LinkedIn](https://www.linkedin.com/in/lucasgbsampaio/)
+- **Lucas Sampaio (lucasgbsampaio)** - [Twitter](https://twitter.com/lucasgbsampaio) - [LinkedIn](https://www.linkedin.com/in/lucasgbsampaio/)
 
 ---
 
